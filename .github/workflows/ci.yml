@@ -28,6 +28,15 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Smoke test build output
+        run: |
+          if [ ! -f dist/index.html ]; then
+            echo "Build failed: dist/index.html not found"
+            ls -la dist || true
+            exit 1
+          fi
+          echo "Build produced dist/index.html"
+
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
