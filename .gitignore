@@ -1,0 +1,23 @@
+node_modules/
+dist/
+.env
+.DS_Store
+
+# Vite
+.vite/
+
+# Local pass database
+pass db thorgarage/
+
+# Editor
+.vscode/
+.idea/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+Thumbs.db
+.vercel
